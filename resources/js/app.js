@@ -1,7 +1,6 @@
-import './bootstrap';
 
-import Alpine from 'alpinejs';
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
+//import checkout from "./checkout/checkout.js";
 
-window.Alpine = Alpine;
-
-Alpine.start();
+//Alpine.data('checkout', checkout);
+Livewire.start();

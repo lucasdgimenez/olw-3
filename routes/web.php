@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Livewire\Checkout;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +22,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/checkout', function () {
-    return view('checkout.index');
-})->middleware(['guest'])->name('dashboard');
+Route::get('/checkout', Checkout::class)->name('checkout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

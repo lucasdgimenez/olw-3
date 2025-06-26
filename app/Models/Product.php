@@ -33,7 +33,7 @@ class Product extends Model
 
       public function skus(): HasMany
     {
-        return $this->hasMany(Skus::class);
+        return $this->hasMany(Sku::class);
     }
 }
 
