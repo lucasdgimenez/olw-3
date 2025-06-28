@@ -17,11 +17,11 @@ class CheckoutService {
                 }
             })->first();
 
-        /*if (!$cart && config('app.env') == 'local') {
+        if (!$cart && config('app.env') == 'local') {
             $seed = new OrderSeeder();
             $seed->run(session()->getId());
             return $this->loadCart();
-        }*/
+        }
 
         //dd($cart);
 

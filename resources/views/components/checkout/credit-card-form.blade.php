@@ -1,4 +1,4 @@
-<form id="form-checkout" x-show="$wire.method == 1">
+<form id="form-checkout" x-show="$wire.method == '{{ $method }}'">
     <div class="py-4 grid grid-cols-6 gap-x-4 gap-y-6 sm:grid-cols-8">
         <div class="col-span-4 sm:col-span-8">
             <x-input-label for="zipcode" value="Numero do cartao"/>
@@ -10,7 +10,6 @@
                 ></div>
             </div>
         </div>
-
 
         <div class="col-span-2 sm:col-span-4">
             <x-input-label for="zipcode" value="Vencimento"/>

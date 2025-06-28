@@ -10,7 +10,8 @@ use App\Livewire\Forms\UserForm;
 class Checkout extends Component
 {
     public array $cart = [];
-    public int $step = CheckoutStepsEnum::INFORMATION->value;
+    public int $step = CheckoutStepsEnum::PAYMENT->value;
+    public int|null $method = null;
     public UserForm $user;
     public AddressForm $address;
 
@@ -32,6 +33,10 @@ class Checkout extends Component
     public function submitShippingStep()
     {
         $this->step = CheckoutStepsEnum::PAYMENT->value;
+    }
+
+    public function creditCardPayment($data) {
+        dd($data);
     }
 
     public function render()

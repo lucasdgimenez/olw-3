@@ -74,11 +74,9 @@
                         <x-checkout.information-form />
                     @elseif ($step === CheckoutStepsEnum::SHIPPING->value)
                         <x-checkout.shipping-form :user="$user" :address="$address"/>
+                    @elseif ($step === CheckoutStepsEnum::PAYMENT->value)
+                        <x-checkout.payment-form :user="$user" :address="$address" />
                     @endif
-
-                    {{--@elseif ($step === CheckoutStepsEnum::PAYMENT->value)
-                        <x-checkout.payment-form :user="$user" :address="$address" />--}}
-                    {{--@endif--}}
 
                 </div>
 

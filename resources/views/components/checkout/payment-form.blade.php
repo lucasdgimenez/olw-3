@@ -55,7 +55,7 @@
                 </div>
             </label>
 
-            <x-checkout.credit-card-form />
+            <x-checkout.credit-card-form :method="1" />
 
             <label
                 for="pix"
